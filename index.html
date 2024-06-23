@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Standing Desks </title>
+</head>
+<body>
+   <!--Header-->
+    <header>
+        <h1>Welcome to Standing Desks </h1>
+    </header>
+    <!--Navigation bar-->
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Accessories</a>
+                <ul class="submenu">
+                    <li><a href="risingdesk.html">Rising Desks</a></li>
+                    <li><a href="basket.html">Basket</a></li>
+                </ul>
+            </li>
+            <li><a href="specialOffer.html">Special Offers</a></li>
+            <li><a href="healthbenefit.html">Health Benefits</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li><!-- Search Form -->
+                <form class="search-form" action="#" method="get" onsubmit="return handleSearch()">
+                    <label for="search">Search:</label>
+                    <input type="search" id="search" name="q" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+	 <!-- Modal Popup -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Hello! Welcome to Standing Desks Website. Explore our range of affordable standing desks for a healthier work experience.</p>
+        </div>
+    </div>
+	<!--Slideshow-->
+	
+  <div class="slideshow-container">
+   <div class="mySlides">
+    <img src="advert1.jpg?v=1698976709&amp;width=3000" alt="metal standing desk">
+  </div>
+  </div>
+  
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="pro2.jpg?v=1698976709&amp;width=3000" alt="Adjustable">
+    </div>
+  </div>
+
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="standing1.jpg?v=1698976709&amp;width=3000" alt="strong">
+    </div> 
+  </div>
+  
+  <div class="slideshow-container">
+    <div class="mySlides">
+     <img src="standsome.jpg?v=1698976709&amp;width=3000" alt="wooden made">
+    </div>
+  </div>
+  
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="standing2.jpg?v=1698976709&amp;width=3000" alt="electric standing desk">
+    </div>
+  </div>	
+   <section class="info">
+    <img src="advert13.jpg" alt="Standing Desk">
+    <div class="info-text">
+      <h2>Why Choose a Standing Desk?</h2>
+      <p>Standing desks promote a healthier lifestyle by reducing the time spent sitting. They can improve posture, reduce back pain, and boost productivity.</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Key Features of Our Standing Desks</h2>
+    <ul>
+      <li>Adjustable height for personalized comfort</li>
+      <li>Ergonomic design for improved posture</li>
+      <li>Durable and sustainable materials</li>
+      <li>Easy assembly and maintenance</li>
+    </ul>
+  </section>
+
+  <section class="benefits">
+    <h2>Benefits of Using a Standing Desk</h2>
+    <div class="benefit">
+      <img src="advert3.jpg" alt="Improved Posture">
+      <p>Improved Posture</p>
+    </div>
+    <div class="benefit">
+      <img src="pro3.jpg" alt="Increased Energy">
+      <p>Increased Energy</p>
+    </div>
+    <div class="benefit">
+      <img src="pro6.jpg" alt="Boosted Productivity">
+      <p>Boosted Productivity</p>
+    </div>
+  </section>
+
+   <div class="footer">
+        <p>&copy; 2023 Standing Desk. All rights reserved. | <a href="privacy_policy.html">Privacy Policy</a> | <a href="termsofservice.html">Terms of Service</a></p>
+
+        <div class="contact-info">
+            <p>Contact us at: contact@standingdesk.com | 12 Tuba rd, Kasoa</p>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Instagram</a>
+            <!-- Add more social media links as needed -->
+        </div>
+    </div>
+   
+<!--Modal Popup Functions-->
+<script>
+function openModal() {
+    document.getElementById('modal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+// Show modal on page load
+window.onload = function () {
+    openModal();
+}
+</script>
+<!--Slideshow Functions-->
+ <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      const slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2000); // Change slide every 2 seconds
+    }
+  </script>
+
+</body>
+</html>
